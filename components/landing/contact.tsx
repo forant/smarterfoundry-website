@@ -20,7 +20,7 @@ export function Contact() {
             Questions about Smarter Foundry or one of our apps? Get in touch.
           </p>
         </div>
-        <dl className="mt-10 grid gap-6 sm:grid-cols-3 max-w-2xl">
+        <dl className="mt-10 grid gap-6 sm:grid-cols-3">
           {details.map((detail) => (
             <div
               key={detail.label}
@@ -29,7 +29,7 @@ export function Contact() {
               <dt className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
                 {detail.label}
               </dt>
-              <dd className="mt-2 text-base font-medium break-words">
+              <dd className="mt-2 text-base font-medium">
                 {detail.href ? (
                   <a
                     href={detail.href}
