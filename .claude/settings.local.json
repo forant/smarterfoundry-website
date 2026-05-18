@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/timforan/Developer/smartereats-website/**)",
+      "Read(//Users/timforan/Developer/smartertraining-website/**)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm build *)"
+    ]
+  }
+}
