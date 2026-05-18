@@ -20,7 +20,7 @@ export function Hero() {
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
             Smarter Foundry LLC builds and operates niche mobile products that
             help people make better decisions around food, fitness, and
-            communication.
+            sport.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
             <a

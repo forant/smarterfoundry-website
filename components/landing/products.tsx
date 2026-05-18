@@ -1,4 +1,4 @@
-import { Utensils, Bike, PenLine } from 'lucide-react'
+import { Utensils, Bike, Target } from 'lucide-react'
 
 const products = [
   {
@@ -14,10 +14,10 @@ const products = [
       'Adaptive indoor cycling and fitness guidance that adjusts to your energy, schedule, and goals instead of assuming a perfect week.',
   },
   {
-    icon: PenLine,
+    icon: Target,
     name: 'PostPoint',
     description:
-      'Lightweight tools for clearer, faster writing and posting — small assists for everyday communication, without getting in the way.',
+      'An AI-assisted racquet sports coach — practice feedback and guidance to help players work on their game between sessions.',
   },
 ]
 

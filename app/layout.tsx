@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   title: 'Smarter Foundry — AI-enabled consumer apps',
   description:
-    'Smarter Foundry LLC builds and operates niche AI-enabled mobile apps that help people make better everyday decisions around food, fitness, and communication.',
+    'Smarter Foundry LLC builds and operates niche AI-enabled mobile apps that help people make better everyday decisions around food, fitness, and sport.',
   metadataBase: new URL('https://smarterfoundry.ai'),
   openGraph: {
     title: 'Smarter Foundry',

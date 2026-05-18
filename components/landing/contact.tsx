@@ -29,7 +29,7 @@ export function Contact() {
               <dt className="text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
                 {detail.label}
               </dt>
-              <dd className="mt-2 text-base font-medium">
+              <dd className="mt-2 text-base font-medium break-words">
                 {detail.href ? (
                   <a
                     href={detail.href}

@@ -12,7 +12,7 @@ export function Footer() {
               <span className="font-semibold">Foundry</span>
             </span>
           </div>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <a href="#products" className="hover:text-foreground transition-colors">
               Products
             </a>
