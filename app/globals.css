@@ -2,31 +2,29 @@
 
 /*
  * Smarter Foundry design tokens.
- * Direction: a small, independent software company — not venture hype.
- *   - background: warm neutral stone
- *   - foreground: a near-black warm ink
- *   - accent: a restrained foundry amber, used sparingly for highlights
+ * Direction: an independent software company, presented with a calm, premium
+ * dark surface — graphite base with slow, warm gradient bloom behind content.
  */
 :root {
-  /* Backgrounds */
-  --background: #FAFAF8;
-  --surface: #FFFFFF;
-  --surface-light: #F2F1ED;
+  /* Backgrounds — dark graphite */
+  --background: #0B0D11;
+  --surface: #15181E;
+  --surface-light: rgba(255, 255, 255, 0.025);
 
   /* Text */
-  --foreground: #1C1B19;
-  --muted-foreground: #6B6862;
+  --foreground: #F4F2EC;
+  --muted-foreground: #9A968D;
 
   /* Brand */
-  --primary: #1C1B19;
-  --primary-foreground: #FFFFFF;
-  --accent: #B45309;
-  --accent-foreground: #FFFFFF;
+  --primary: #F4F2EC;
+  --primary-foreground: #0B0D11;
+  --accent: #D97706;
+  --accent-foreground: #0B0D11;
 
   /* Lines / inputs */
-  --border: #E6E4DE;
-  --input: #E6E4DE;
-  --ring: #B45309;
+  --border: rgba(244, 242, 236, 0.10);
+  --input: rgba(244, 242, 236, 0.10);
+  --ring: #D97706;
 
   /* Cards use a 12px radius */
   --radius: 0.75rem;
@@ -61,8 +59,31 @@
   * {
     border-color: var(--border);
   }
-  body {
+  html {
     background-color: var(--background);
+  }
+  body {
     color: var(--foreground);
+    overflow-x: hidden;
+  }
+}
+
+/* A single, very slow drift behind the hero. Motion is barely noticeable. */
+@keyframes sf-blob-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(3vw, 2vh, 0) scale(1.06); }
+}
+
+.sf-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sf-blob {
+    animation: none !important;
+    transform: none !important;
   }
 }

@@ -6,7 +6,20 @@
       "Bash(pnpm --version)",
       "Bash(pnpm install *)",
       "Bash(pnpm build *)",
-      "Bash(pnpm exec *)"
+      "Bash(pnpm exec *)",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s http://localhost:3000 -o /tmp/sf-page.html)",
+      "Read(//tmp/**)",
+      "Bash(grep -o 'sf-blob' /tmp/sf-page.html | wc -l && grep -c 'fixed inset-0' /tmp/sf-page.html)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s http://localhost:3000/_next/static/css/)",
+      "Bash(curl -s 'http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0wbwd_e._.css')",
+      "Bash(curl -s 'http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0wbwd_e._.css' > /tmp/sf.css && grep -n 'body\\\\s*{' /tmp/sf.css)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(ps -p 23877 -o pid,ppid,command)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }
