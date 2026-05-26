@@ -5,7 +5,8 @@
       "Read(//Users/timforan/Developer/smartertraining-website/**)",
       "Bash(pnpm --version)",
       "Bash(pnpm install *)",
-      "Bash(pnpm build *)"
+      "Bash(pnpm build *)",
+      "Bash(pnpm exec *)"
     ]
   }
 }

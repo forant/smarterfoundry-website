@@ -6,18 +6,21 @@ const products = [
     name: 'SmarterEats',
     description:
       'AI-assisted food decision support and meal awareness — helping people notice patterns and make everyday food choices with a little more context.',
+    href: 'https://smartereats.ai',
   },
   {
     icon: Bike,
     name: 'SmarterTraining',
     description:
       'Adaptive indoor cycling and fitness guidance that adjusts to your energy, schedule, and goals instead of assuming a perfect week.',
+    href: 'https://smartertraining.ai',
   },
   {
     icon: Target,
     name: 'PostPoint',
     description:
       'An AI-assisted racquet sports coach — practice feedback and guidance to help players work on their game between sessions.',
+    href: null,
   },
 ]
 
@@ -35,23 +38,50 @@ export function Products() {
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {products.map((product) => (
-            <article
-              key={product.name}
-              className="flex flex-col rounded-lg border border-border bg-surface p-7"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-md bg-surface-light">
-                <product.icon
-                  className="h-5 w-5 text-accent"
-                  strokeWidth={1.75}
-                />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold">{product.name}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
-                {product.description}
-              </p>
-            </article>
-          ))}
+          {products.map((product) => {
+            const content = (
+              <>
+                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-surface-light">
+                  <product.icon
+                    className="h-5 w-5 text-accent"
+                    strokeWidth={1.75}
+                  />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold">{product.name}</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                  {product.description}
+                </p>
+                {!product.href && (
+                  <p className="mt-4 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                    Coming soon
+                  </p>
+                )}
+              </>
+            )
+
+            const baseClasses =
+              'flex flex-col rounded-lg border border-border bg-surface p-7'
+
+            if (product.href) {
+              return (
+                <a
+                  key={product.name}
+                  href={product.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${baseClasses} transition-colors hover:border-accent`}
+                >
+                  {content}
+                </a>
+              )
+            }
+
+            return (
+              <article key={product.name} className={baseClasses}>
+                {content}
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
